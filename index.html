@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedRebel HR | Appraised Value Brief</title>
+<meta name="description" content="MedRebel HR appraised value brief. Independent engineering benchmark for the HIPAA and HR app purpose-built for independent dental and medical practices.">
+<meta property="og:title" content="MedRebel HR | Appraised Value Brief">
+<meta property="og:description" content="Independent engineering benchmark for MedRebel HR.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0A1326;
+  --royal: #1F4FE8;
+  --ink: #1A2230;
+  --muted: #5A6573;
+  --rule: #D6DCE3;
+  --rule-strong: #B5BFCB;
+  --bg-soft: #F4F6F9;
+  --bg-card: #FAFBFD;
+  --green: #1B7A3B;
+  --cyan-soft: #9DCFFF;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  background: #fff;
+  color: var(--ink);
+  font-family: 'Inter', -apple-system, Segoe UI, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+body {
+  font-size: clamp(14px, 1.05vw, 16px);
+}
+
+/* DARK HEADER STRIP - edge to edge */
+.dark-header {
+  background: var(--navy);
+  color: #fff;
+  width: 100%;
+  padding: 0 clamp(20px, 4vw, 64px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(20px, 4vw, 48px);
+  min-height: clamp(96px, 12vw, 150px);
+}
+.dark-header .title-left .brief {
+  font-size: clamp(24px, 3.2vw, 40px);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.6px;
+  line-height: 1.05;
+  margin-bottom: 10px;
+}
+.dark-header .title-left .meta {
+  font-size: clamp(11px, 1vw, 14px);
+  font-weight: 600;
+  color: var(--cyan-soft);
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+.dark-header .logo-right { flex-shrink: 0; }
+.dark-header .logo-right img {
+  height: clamp(72px, 10vw, 130px);
+  width: auto;
+  display: block;
+}
+
+/* MAIN CONTENT - wide screen, edge-to-edge with internal padding */
+.body-pad {
+  padding: clamp(18px, 2.5vw, 40px) clamp(20px, 4vw, 64px) clamp(20px, 3vw, 48px);
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+/* HEADLINE VALUE BOX */
+.valuebox {
+  background: var(--navy);
+  color: #fff;
+  border-radius: 10px;
+  padding: clamp(18px, 2.5vw, 36px) clamp(22px, 3vw, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(20px, 3vw, 48px);
+  margin: 0 0 16px;
+  flex-wrap: wrap;
+}
+.valuebox .left { flex: 1; min-width: 280px; }
+.valuebox .label {
+  font-size: clamp(11px, 1vw, 14px);
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--cyan-soft);
+  margin-bottom: 8px;
+}
+.valuebox .value {
+  font-size: clamp(38px, 5.5vw, 76px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1.6px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.valuebox .value .unit {
+  font-size: clamp(20px, 2.2vw, 30px);
+  font-weight: 700;
+  color: var(--cyan-soft);
+  letter-spacing: 0;
+}
+.valuebox .basis {
+  font-size: clamp(13px, 1.05vw, 16px);
+  color: #D6E5F5;
+  line-height: 1.55;
+  max-width: 520px;
+  margin: 0;
+  flex: 1;
+  min-width: 240px;
+}
+
+/* STAT PILLS */
+.statrow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 0 0 16px;
+}
+.statpill {
+  background: var(--bg-soft);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--royal);
+  border-radius: 8px;
+  padding: 14px 18px;
+}
+.statpill .num {
+  font-size: clamp(20px, 2.2vw, 30px);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+.statpill .cap {
+  font-size: clamp(10px, 0.85vw, 12px);
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* TWO-CARD ROW */
+.two-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 18px 22px;
+}
+.card h3 {
+  font-size: clamp(15px, 1.3vw, 19px);
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+.card ul { list-style: none; padding: 0; margin: 0; }
+.card li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: clamp(13px, 1vw, 15px);
+  color: var(--ink);
+}
+.card li:last-child { border-bottom: none; }
+.card li .val {
+  color: var(--navy);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.card .source {
+  font-size: clamp(11px, 0.85vw, 13px);
+  color: var(--muted);
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* VALUATION BAND */
+.band {
+  background: var(--bg-soft);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 16px 22px;
+  margin-bottom: 16px;
+}
+.band h3 {
+  font-size: clamp(15px, 1.3vw, 19px);
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+.band-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.band-cell {
+  text-align: center;
+  padding: 14px 12px;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+}
+.band-cell .tier {
+  font-size: clamp(10px, 0.9vw, 13px);
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.band-cell .amount {
+  font-size: clamp(20px, 2.4vw, 32px);
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -0.5px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.band-cell .formula {
+  font-size: clamp(11px, 0.9vw, 13px);
+  color: var(--muted);
+}
+
+/* REPLACES TABLE */
+.replaces {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 16px 22px;
+  margin-bottom: 0;
+}
+.replaces h3 {
+  font-size: clamp(15px, 1.3vw, 19px);
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+}
+.replaces h3 .h3-sub {
+  font-weight: 500;
+  font-size: clamp(12px, 1vw, 14px);
+  color: var(--muted);
+}
+.replaces .table-wrap { overflow-x: auto; }
+.replaces table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: clamp(13px, 1vw, 15px);
+}
+.replaces th {
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 2px solid var(--navy);
+  font-size: clamp(11px, 0.9vw, 13px);
+  font-weight: 700;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.replaces th:last-child { text-align: right; }
+.replaces td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink);
+}
+.replaces td:last-child {
+  text-align: right;
+  font-weight: 700;
+  color: var(--navy);
+  white-space: nowrap;
+}
+.replaces tr.total td {
+  border-bottom: none;
+  border-top: 2px solid var(--navy);
+  font-weight: 800;
+  font-size: clamp(14px, 1.1vw, 17px);
+  color: var(--navy);
+  padding-top: 12px;
+}
+.replaces tr.total td:last-child { color: var(--green); }
+.replaces .methodology {
+  font-size: clamp(11px, 0.85vw, 13px);
+  color: var(--muted);
+  margin-top: 14px;
+  line-height: 1.6;
+}
+.replaces .methodology strong { color: var(--ink); font-weight: 700; }
+.replaces .methodology .name { color: var(--navy); font-weight: 700; }
+
+/* MOBILE BREAKPOINT */
+@media (max-width: 768px) {
+  .dark-header {
+    flex-direction: column-reverse;
+    padding: 18px 20px 20px;
+    gap: 14px;
+    min-height: 0;
+    text-align: center;
+  }
+  .dark-header .title-left { text-align: center; }
+  .dark-header .logo-right img { height: 90px; }
+  .dark-header .title-left .brief { font-size: 26px; }
+  .dark-header .title-left .meta { font-size: 11px; letter-spacing: 1.5px; }
+  .valuebox {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 14px;
+  }
+  .valuebox .value { font-size: 42px; }
+  .valuebox .value .unit { font-size: 20px; }
+  .valuebox .basis { font-size: 13px; }
+  .statrow { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .statpill { padding: 12px 14px; }
+  .statpill .num { font-size: 22px; }
+  .two-card { grid-template-columns: 1fr; gap: 12px; }
+  .card { padding: 16px 18px; }
+  .band { padding: 14px 16px; }
+  .band-grid { grid-template-columns: 1fr; gap: 10px; }
+  .band-cell .amount { font-size: 24px; }
+  .replaces { padding: 14px 16px; }
+  .replaces th, .replaces td { padding: 6px 8px; }
+  .body-pad { padding: 18px 20px 28px; }
+}
+
+/* PRINT (preserve letter-page PDF) */
+@media print {
+  @page { size: Letter; margin: 0; }
+  body { font-size: 9.5pt; line-height: 1.4; }
+  .dark-header { padding: 0 0.5in; min-height: 0; height: 110pt; }
+  .dark-header .title-left .brief { font-size: 26pt; }
+  .dark-header .title-left .meta { font-size: 10pt; letter-spacing: 1.5px; }
+  .dark-header .logo-right img { height: 100pt; }
+  .body-pad { padding: 8pt 0.5in 5pt; max-width: none; }
+  .valuebox { padding: 11pt 20pt; gap: 22pt; margin: 0 0 8pt; flex-wrap: nowrap; }
+  .valuebox .value { font-size: 34pt; letter-spacing: -1.1px; margin-bottom: 5pt; }
+  .valuebox .value .unit { font-size: 15pt; }
+  .valuebox .basis { font-size: 9pt; max-width: 4in; }
+  .statrow { grid-template-columns: repeat(4, 1fr); gap: 7pt; margin: 0 0 8pt; }
+  .statpill { padding: 5pt 10pt; border-left-width: 3pt; }
+  .statpill .num { font-size: 13pt; }
+  .statpill .cap { font-size: 7pt; letter-spacing: 0.5px; }
+  .two-card { gap: 10pt; margin-bottom: 8pt; }
+  .card { padding: 8pt 12pt; border-radius: 6pt; }
+  .card h3 { font-size: 10.5pt; margin-bottom: 6pt; }
+  .card li { padding: 1.5pt 0; font-size: 8.5pt; }
+  .card .source { font-size: 7.5pt; margin-top: 5pt; }
+  .band { padding: 7pt 12pt; margin-bottom: 8pt; border-radius: 6pt; }
+  .band h3 { font-size: 10.5pt; margin-bottom: 6pt; }
+  .band-grid { grid-template-columns: 1fr 1fr 1fr; gap: 8pt; }
+  .band-cell { padding: 5pt 6pt; border-radius: 5pt; }
+  .band-cell .tier { font-size: 7.5pt; margin-bottom: 3pt; }
+  .band-cell .amount { font-size: 15pt; margin-bottom: 2pt; }
+  .band-cell .formula { font-size: 7.5pt; }
+  .replaces { padding: 7pt 13pt; margin-bottom: 0; border-radius: 6pt; }
+  .replaces h3 { font-size: 11pt; margin-bottom: 7pt; }
+  .replaces table { font-size: 9pt; }
+  .replaces th, .replaces td { padding: 3pt 6pt; font-size: 9pt; }
+  .replaces th { font-size: 8.5pt; }
+  .replaces tr.total td { font-size: 10pt; padding-top: 5pt; }
+  .replaces .methodology { font-size: 7pt; margin-top: 5pt; line-height: 1.35; }
+}
+</style>
+</head>
+<body>
+
+<header class="dark-header">
+  <div class="title-left">
+    <div class="brief">Appraised Value Brief</div>
+    <div class="meta">May 2026  ·  Confidential</div>
+  </div>
+  <div class="logo-right">
+    <img src="HR_Logo_Dark_Clean.svg" alt="MedRebel HR">
+  </div>
+</header>
+
+<main class="body-pad">
+
+  <section class="valuebox">
+    <div class="left">
+      <div class="label">Appraised Value</div>
+      <div class="value">$330K <span class="unit">to $640K</span></div>
+    </div>
+    <p class="basis">Based on 2,500+ senior developer hours at prevailing 2026 healthcare market rates. Conservative range. Industry-standard hourly benchmarks.</p>
+  </section>
+
+  <section class="statrow">
+    <div class="statpill"><div class="num">2,500+</div><div class="cap">Developer Hours</div></div>
+    <div class="statpill"><div class="num">3 mo</div><div class="cap">Time to Build</div></div>
+    <div class="statpill"><div class="num">$0</div><div class="cap">Outside Agency</div></div>
+    <div class="statpill"><div class="num">$0</div><div class="cap">Outside Equity</div></div>
+  </section>
+
+  <section class="two-card">
+    <div class="card">
+      <h3>What's Inside the App</h3>
+      <ul>
+        <li><span class="lbl">Database tables</span><span class="val">40+</span></li>
+        <li><span class="lbl">Row-level security policies</span><span class="val">200</span></li>
+        <li><span class="lbl">Backend functions</span><span class="val">30+</span></li>
+        <li><span class="lbl">React UI components</span><span class="val">~100</span></li>
+        <li><span class="lbl">Production integrations</span><span class="val">3</span></li>
+        <li><span class="lbl">Documented bug fixes</span><span class="val">~130</span></li>
+        <li><span class="lbl">Independent security audits</span><span class="val">5 rounds</span></li>
+      </ul>
+      <p class="source">Counts taken directly from the MedRebel codebase, May 2026.</p>
+    </div>
+
+    <div class="card">
+      <h3>Hourly Rate Used in the Math</h3>
+      <ul>
+        <li><span class="lbl">Senior full-stack, healthcare-compliant</span><span class="val">$150&ndash;$200/hr</span></li>
+        <li><span class="lbl">Mid-level (not used in the band)</span><span class="val">$100&ndash;$140/hr</span></li>
+        <li><span class="lbl">Agency markup (not applied)</span><span class="val">1.5x&ndash;2.0x</span></li>
+        <li><span class="lbl">Architecture and design</span><span class="val">$200&ndash;$350/hr</span></li>
+      </ul>
+      <p class="source">Sources: Robert Half Technology Salary Guide 2026, Toptal healthcare developer rate publications, Stack Overflow Developer Survey 2024.</p>
+    </div>
+  </section>
+
+  <section class="band">
+    <h3>The Valuation Band, Three Ways</h3>
+    <div class="band-grid">
+      <div class="band-cell">
+        <div class="tier">Conservative</div>
+        <div class="amount">$330,000</div>
+        <div class="formula">2,500 hrs &times; $150</div>
+      </div>
+      <div class="band-cell">
+        <div class="tier">Midpoint</div>
+        <div class="amount">$437,500</div>
+        <div class="formula">2,500 hrs &times; $175</div>
+      </div>
+      <div class="band-cell">
+        <div class="tier">Top of Range</div>
+        <div class="amount">$640,000</div>
+        <div class="formula">2,500 hrs &times; $200, plus adj.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="replaces">
+    <h3>What MedRebel HR Replaces Inside a Practice <span class="h3-sub">  ·  per practice, per month  ·  public vendor pricing, May 2026</span></h3>
+    <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Standalone Vendor Category</th>
+          <th>Monthly Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>HIPAA compliance software (Compliancy Group, similar)</td><td>$200 &ndash; $500</td></tr>
+        <tr><td>HR portal and onboarding (Bambee, BambooHR)</td><td>$100 &ndash; $300</td></tr>
+        <tr><td>Employee handbook tool</td><td>$50 &ndash; $150</td></tr>
+        <tr><td>Training tracker</td><td>$50 &ndash; $150</td></tr>
+        <tr><td>PTO management system</td><td>$50 &ndash; $100</td></tr>
+        <tr class="total"><td>Total Replaced Per Practice, Per Month</td><td>$450 &ndash; $1,200</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="methodology"><strong>Methodology.</strong> Hours via component and function counting (COCOMO II). Rates: Robert Half 2026, Toptal, Stack Overflow Dev Survey 2024. Vendor pricing: public sites, May 2026.  ·  Issued by <span class="name">Ryan Jacox</span>, Founder and CEO, MedRebel  ·  Confidential.</p>
+  </section>
+
+</main>
+
+</body>
+</html>
