@@ -402,31 +402,31 @@ body {
   <section class="valuebox">
     <div class="left">
       <div class="label">Appraised Value</div>
-      <div class="value">$330K <span class="unit">to $640K</span></div>
+      <div class="value">$555K <span class="unit">to $740K</span></div>
     </div>
-    <p class="basis">Based on 2,500+ senior developer hours at prevailing 2026 healthcare market rates. Conservative range. Industry-standard hourly benchmarks.</p>
+    <p class="basis">Based on 3,700 effective senior developer hours (9,300 raw hours via COCOMO II, discounted 60 percent for AI-assisted productivity) at prevailing 2026 healthcare market rates. Verified by independent codebase audit.</p>
   </section>
 
   <section class="statrow">
-    <div class="statpill"><div class="num">2,500+</div><div class="cap">Developer Hours</div></div>
-    <div class="statpill"><div class="num">3 mo</div><div class="cap">Time to Build</div></div>
-    <div class="statpill"><div class="num">$0</div><div class="cap">Outside Agency</div></div>
-    <div class="statpill"><div class="num">$0</div><div class="cap">Outside Equity</div></div>
+    <div class="statpill"><div class="num">3,700</div><div class="cap">Effective Dev Hours</div></div>
+    <div class="statpill"><div class="num">1,432</div><div class="cap">Commits in 81 Days</div></div>
+    <div class="statpill"><div class="num">93,629</div><div class="cap">Lines of Code</div></div>
+    <div class="statpill"><div class="num">$0</div><div class="cap">Outside Agency or Equity</div></div>
   </section>
 
   <section class="two-card">
     <div class="card">
-      <h3>What's Inside the App</h3>
+      <h3>What's Inside the App (Verified)</h3>
       <ul>
-        <li><span class="lbl">Database tables</span><span class="val">40+</span></li>
-        <li><span class="lbl">Row-level security policies</span><span class="val">200</span></li>
-        <li><span class="lbl">Backend functions</span><span class="val">30+</span></li>
-        <li><span class="lbl">React UI components</span><span class="val">~100</span></li>
-        <li><span class="lbl">Production integrations</span><span class="val">3</span></li>
-        <li><span class="lbl">Documented bug fixes</span><span class="val">~130</span></li>
+        <li><span class="lbl">Database tables</span><span class="val">68</span></li>
+        <li><span class="lbl">Row-level security policies</span><span class="val">252</span></li>
+        <li><span class="lbl">Backend functions (edge + Postgres)</span><span class="val">189</span></li>
+        <li><span class="lbl">React components, pages, hooks</span><span class="val">245</span></li>
+        <li><span class="lbl">Triggers, indexes, enums, buckets</span><span class="val">229</span></li>
+        <li><span class="lbl">Production TypeScript LOC</span><span class="val">93,629</span></li>
         <li><span class="lbl">Independent security audits</span><span class="val">5 rounds</span></li>
       </ul>
-      <p class="source">Counts taken directly from the MedRebel codebase, May 2026.</p>
+      <p class="source">Counts pulled directly from the MedRebel codebase, git history, and production database, May 2026.</p>
     </div>
 
     <div class="card">
@@ -446,18 +446,18 @@ body {
     <div class="band-grid">
       <div class="band-cell">
         <div class="tier">Conservative</div>
-        <div class="amount">$330,000</div>
-        <div class="formula">2,500 hrs &times; $150</div>
+        <div class="amount">$555,000</div>
+        <div class="formula">3,700 hrs &times; $150</div>
       </div>
       <div class="band-cell">
         <div class="tier">Midpoint</div>
-        <div class="amount">$437,500</div>
-        <div class="formula">2,500 hrs &times; $175</div>
+        <div class="amount">$647,500</div>
+        <div class="formula">3,700 hrs &times; $175</div>
       </div>
       <div class="band-cell">
         <div class="tier">Top of Range</div>
-        <div class="amount">$640,000</div>
-        <div class="formula">2,500 hrs &times; $200, plus adj.</div>
+        <div class="amount">$740,000</div>
+        <div class="formula">3,700 hrs &times; $200</div>
       </div>
     </div>
   </section>
@@ -482,7 +482,7 @@ body {
       </tbody>
     </table>
     </div>
-    <p class="methodology"><strong>Methodology.</strong> Hours via component and function counting (COCOMO II). Rates: Robert Half 2026, Toptal, Stack Overflow Dev Survey 2024. Vendor pricing: public sites, May 2026.  ·  Issued by <span class="name">Ryan Jacox</span>, Founder and CEO, MedRebel  ·  Confidential.</p>
+    <p class="methodology"><strong>Methodology.</strong> Hours derived from COCOMO II applied to 93,629 production LOC across 283 source files, discounted 60 percent for AI-assisted productivity (~3,700 effective senior hours). Counts verified against codebase, git history, and live database (68 tables, 252 RLS policies, 189 functions, 1,432 commits in 81 active days). Rates: Robert Half 2026, Toptal, Stack Overflow Dev Survey 2024. Vendor pricing: public sites, May 2026.  ·  Issued by <span class="name">Ryan Jacox</span>, Founder and CEO, MedRebel  ·  Confidential.</p>
   </section>
 
 </main>
